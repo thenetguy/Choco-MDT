@@ -26,7 +26,7 @@ if ($CheckDS)
 {
 
 
-Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymentshare $DeploymentPSDrive is present, lets continue"
+Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymen Drive $DeploymentPSDrive is present, lets continue"
 Start-Sleep -Seconds 5
 }  
 else
@@ -38,7 +38,7 @@ exit
 Write-Host -ForegroundColor Green -BackgroundColor Black "Importing MicrosoftDeploymentToolkit.psd1"
 Start-Sleep -Seconds 5
 Import-Module "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
-#Create choco folder under applications in MDT
+#Create $AppsFolder folder under applications in MDT
 Write-Host -ForegroundColor Green -BackgroundColor Black "Creating $AppsFolder folder under Applications in MDT"
 Start-Sleep -Seconds 5
 New-Item -path "$DeploymentPSDrive/Applications" -enable "True" -Name "$AppsFolder" -Comments "" -ItemType "folder" -Verbose
