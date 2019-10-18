@@ -11,6 +11,17 @@ else
 Write-Host -ForegroundColor Red -BackgroundColor Black "Microsoft Deployment Toolkit must be installed before running this script. Please install MDT and run this script again"
 exit
 }
+$CheckDS= Test-Path "DS001:\"
+if ($CheckDS)
+{
+Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymentshare D001 is present, lets continue"
+Start-Sleep -Seconds 5
+}  
+else
+{
+Write-Host -ForegroundColor Red -BackgroundColor Black "Deploymentshare D001 is not found. Please create the Deploymentshare then run this script again"
+exit
+}
 #import MicrosoftDeploymentToolkit.psd1
 Write-Host -ForegroundColor Green -BackgroundColor Black "importing MicrosoftDeploymentToolkit.psd1..."
 Start-Sleep -Seconds 5
