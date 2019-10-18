@@ -1,4 +1,9 @@
-﻿Write-Host -ForegroundColor Green -BackgroundColor Black "checking if Microsoft Deployment Toolkit is installed ..."
+﻿$AppsFolder="Choco"
+
+$DeploymentPSDrive= "DS001:"
+
+#check if Microsoft Deployment Toolkit is installed
+Write-Host -ForegroundColor Green -BackgroundColor Black "checking if Microsoft Deployment Toolkit is installed ..."
 Start-Sleep -Seconds 5
 $CheckMDT= Test-Path "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
 if ($CheckMDT)
@@ -11,7 +16,7 @@ else
 Write-Host -ForegroundColor Red -BackgroundColor Black "Microsoft Deployment Toolkit must be installed before running this script. Please install MDT and run this script again"
 exit
 }
-$CheckDS= Test-Path "DS001:\"
+$CheckDS= Test-Path "$DeploymentPSDrive"
 if ($CheckDS)
 {
 Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymentshare D001 is present, lets continue"
@@ -29,7 +34,7 @@ Import-Module "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploy
 #Create choco folder under applications in MDT
 Write-Host -ForegroundColor Green -BackgroundColor Black "Creating choco folder under applications in MDT"
 Start-Sleep -Seconds 5
-new-item -path "DS001:\Applications" -enable "True" -Name "Choco" -Comments "" -ItemType "folder" -Verbose
+New-Item -path "$DeploymentPSDrive/Applications" -enable "True" -Name "$AppsFolder" -Comments "" -ItemType "folder" -Verbose
 #import app list from apps.txt *muser be located in the same folder as this script*
 Write-Host -ForegroundColor Green -BackgroundColor Black "importing app list from apps.txt into MDT"
 Start-Sleep -Seconds 5
