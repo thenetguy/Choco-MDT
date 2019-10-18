@@ -1,5 +1,6 @@
-﻿$AppsFolder="Choco"
-
+﻿#User Editable . Change $Appfolder to whatever folder you want apps to be installed in MDT under Applications
+$AppsFolder="Choco"
+#User Editable . Change $DeploymentPSDrive to whatever your MDT PS Drive . Default is DS001: . if you only have one deploymentshare on this system leave it to default if not change appropriately
 $DeploymentPSDrive= "DS001:"
 
 #Check if Microsoft Deployment Toolkit is installed
@@ -16,9 +17,14 @@ else
 Write-Host -ForegroundColor Red -BackgroundColor Black "Microsoft Deployment Toolkit must be installed before running this script. Please install MDT and run this script again"
 exit
 }
+#Check if Deployment PS Drive $DeploymentPSDrive is present
+Write-Host -ForegroundColor Green -BackgroundColor Black "Checking if Deployment PS Drive $DeploymentPSDrive is present"
+Start-Sleep -Seconds 5
 $CheckDS= Test-Path "$DeploymentPSDrive"
 if ($CheckDS)
 {
+
+
 Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymentshare $DeploymentPSDrive is present, lets continue"
 Start-Sleep -Seconds 5
 }  
