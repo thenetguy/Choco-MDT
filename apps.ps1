@@ -1,7 +1,8 @@
-﻿#User Editable . Change $Appfolder to whatever folder you want apps to be installed in MDT under Applications
-$AppsFolder="Choco"
-#User Editable . Change $DeploymentPSDrive to whatever your MDT PS Drive . Default is DS001: . if you only have one deploymentshare on this system leave it to default if not change appropriately
+﻿####################User Editable.########### Change $DeploymentPSDrive to whatever your MDT PS Drive . Default is DS001: . if you only have one deploymentshare on this system leave it to default if not change appropriately
 $DeploymentPSDrive= "DS001:"
+####################User Editable.########### Change $Appfolder to whatever folder you want apps to be installed in MDT under Applications
+$AppsFolder="Choco"
+####################End User Editable section########################################################################################################################
 
 #Check if Microsoft Deployment Toolkit is installed
 Write-Host -ForegroundColor Green -BackgroundColor Black "Checking if Microsoft Deployment Toolkit is installed ..."
@@ -48,6 +49,6 @@ $Apps = Get-Content -Path .\apps.txt
 #add apps from apps.txt to MDT
 ForEach($Apps In $Apps)
 {
-import-MDTApplication -path "DS001:\Applications\Choco" -enable "True" -Name "$Apps" -ShortName "$Apps" -Version "" -Publisher "" -Language "" -CommandLine "powershell.exe choco install $Apps -Y --Force" -WorkingDirectory "" -NoSource -Verbose
+import-MDTApplication -path "$DeploymentPSDrive\Applications\Choco" -enable "True" -Name "$Apps" -ShortName "$Apps" -Version "" -Publisher "" -Language "" -CommandLine "powershell.exe choco install $Apps -Y --Force" -WorkingDirectory "" -NoSource -Verbose
 }
 Start-Sleep -Seconds 5
