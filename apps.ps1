@@ -9,7 +9,7 @@ Start-Sleep -Seconds 5
 else
 {
 
-Write-Host -ForegroundColor Yellow -BackgroundColor Black "Microsoft Deployment Toolkitmust is not installed. Please install MDT and run this script again"
+Write-Host -ForegroundColor Red -BackgroundColor Black "Microsoft Deployment Toolkit must is not installed. Please install MDT and run this script again"
 exit
 }
 #import MicrosoftDeploymentToolkit.psd1
