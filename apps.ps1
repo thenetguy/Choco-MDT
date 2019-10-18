@@ -9,7 +9,7 @@ Start-Sleep -Seconds 5
 $CheckMDT= Test-Path "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
 if ($CheckMDT)
 {
-Write-Host -ForegroundColor Green -BackgroundColor Black "Microsoft Deployment Toolkitmust is installed, lets continue"
+Write-Host -ForegroundColor Green -BackgroundColor Black "Microsoft Deployment Toolkit is installed, lets continue"
 Start-Sleep -Seconds 5
 }  
 else
