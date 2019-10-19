@@ -1,10 +1,16 @@
-﻿#User Editable Change $DeploymentPSDrive to whatever your MDT PS Drive . Default is DS001: . if you only have one deploymentshare on this system leave it to default if not change appropriately
-$DeploymentPSDrive= "DS001:"
-####################User Editable.########### Change $Appfolder to whatever folder you want apps to be installed in MDT under Applications
+﻿#################### Start User Editable section ####################
+#User Editable Change $DeploymentPSDrive to whatever your MDT PS Drive . Default is DS001: . if you only have one deploymentshare on this system leave it to default if not change appropriately
+$DeploymentPSDrive="DS001:"
+#User Editable Change $Appfolder to whatever folder you want apps to be installed in MDT under Applications
 $AppsFolder="Choco"
-####################End User Editable section####################
+#################### End User Editable section ######################
+#
+#
+#
+#
 
 #Check if Microsoft Deployment Toolkit is installed
+
 Write-Host -ForegroundColor Green -BackgroundColor Black "Checking if Microsoft Deployment Toolkit is installed ..."
 Start-Sleep -Seconds 5
 $CheckMDT= Test-Path "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
@@ -18,6 +24,11 @@ else
 Write-Host -ForegroundColor Red -BackgroundColor Black "Microsoft Deployment Toolkit must be installed before running this script. Please install MDT and run this script again"
 exit
 }
+
+#import MicrosoftDeploymentToolkit.psd1
+Write-Host -ForegroundColor Green -BackgroundColor Black "Importing MicrosoftDeploymentToolkit.psd1"
+Start-Sleep -Seconds 5
+Import-Module "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
 #Check if Deployment PS Drive $DeploymentPSDrive is present
 Write-Host -ForegroundColor Green -BackgroundColor Black "Checking if Deployment PS Drive $DeploymentPSDrive is present"
 Start-Sleep -Seconds 5
@@ -32,12 +43,9 @@ Start-Sleep -Seconds 5
 else
 {
 Write-Host -ForegroundColor Red -BackgroundColor Black "Deploymentshare $DeploymentPSDrive is not found. Please create the Deploymentshare then run this script again"
-exit
+Start-Sleep -Seconds 100
 }
-#import MicrosoftDeploymentToolkit.psd1
-Write-Host -ForegroundColor Green -BackgroundColor Black "Importing MicrosoftDeploymentToolkit.psd1"
-Start-Sleep -Seconds 5
-Import-Module "C:\Program Files\Microsoft Deployment Toolkit\bin\MicrosoftDeploymentToolkit.psd1"
+
 #Create $AppsFolder folder under applications in MDT
 Write-Host -ForegroundColor Green -BackgroundColor Black "Creating $AppsFolder folder under Applications in MDT"
 Start-Sleep -Seconds 5
