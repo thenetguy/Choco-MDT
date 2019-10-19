@@ -26,7 +26,7 @@ if ($CheckDS)
 {
 
 
-Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deploymen Drive $DeploymentPSDrive is present, lets continue"
+Write-Host -ForegroundColor Green -BackgroundColor Black "MDT Deployment Drive $DeploymentPSDrive is present, lets continue"
 Start-Sleep -Seconds 5
 }  
 else
