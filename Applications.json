@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Google Chrome",
+        "version": "70.0.3538.11000",
+        "filename": "google Chrome File name",
+        "install": "Choco install GoogleChrome -Y --Force"
+    },
+    {
+        "name": "Mozilla Firefox",
+        "version": "Latest Available",
+        "filename": "firefox file name",
+        "install": "Choco install FireFox -Y --Force"
+    }
+]
