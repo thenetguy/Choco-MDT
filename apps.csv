@@ -1,5 +1,5 @@
 Name,ShortName,Publisher,Language,Version,Install
-Chocolatey,Chocolatey,Chocolatey,English,Latest Available,Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Chocolatey,Chocolatey,Chocolatey,English,Latest Available,powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 Google Chrome,Chrome,Google,English,Latest Available,Choco Install GoogleChrome -Y --Force
 Mozilla Firefox,Firefox,"Mozilla ",English,Latest Available,Choco Install FireFox -Y --Force
 WinRar,WinRar,WinRar,English,Latest Available,Choco Install WinRar -Y --Force
