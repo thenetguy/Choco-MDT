@@ -59,7 +59,7 @@ if ($CheckApps) {
     Start-Sleep -Seconds 0
 }  
 else {
-    Write-Host -ForegroundColor Red -BackgroundColor Black "Unable to find csv.txt in the same folder as this script. make sure apps.CSV is located in the same folder as this script and run this script again"
+    Write-Host -ForegroundColor Red -BackgroundColor Black "Unable to find apps.csv in the same folder as this script. make sure apps.CSV is located in the same folder as this script and run this script again"
     Start-Sleep -Seconds 10
     exit
 }
