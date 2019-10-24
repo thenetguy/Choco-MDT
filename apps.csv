@@ -1,0 +1,43 @@
+Name,ShortName,Publisher,Language,Version,CommandLine
+Chocolatey,Chocolatey,Chocolatey,English,Latest Available,powershell.exe Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+Google Chrome,Chrome,Google,English,Latest Available,Choco Install GoogleChrome -Y --Force
+Mozilla Firefox,Firefox,"Mozilla ",English,Latest Available,Choco Install FireFox -Y --Force
+WinRar,WinRar,WinRar,English,Latest Available,Choco Install WinRar -Y --Force
+Notepad++,Notepad++,Notepad++,English,Latest Available,Choco Install NotePadPlusPlus -Y --Force
+Adobe Reader,Adobe Reader,Adobe,English,Latest Available,Choco Install AdobeReader -Y --Force
+Java SE Runtime Environment 8,Java SE Runtime,Oracle,English,Latest Available,Choco Install JRE8 -Y --Force
+7zip,7zip,7zip,English,Latest Available,Choco Install 7zip.Install -Y --Force
+VLC media player,VLC,VLC,English,Latest Available,Choco Install VLC -Y --Force
+Foxit Reader,Foxit Reader,Foxit Software,English,Latest Available,Choco Install FoxitReader -Y --Force
+Python 2,Python 2,Python,English,Latest Available,Choco Install Python2 -Y --Force
+Malwarebytes,Malwarebytes,Malwarebytes,English,Latest Available,Choco Install Malwarebytes -Y --Force
+GIMP - GNU Image Manipulation Program,Gimp,Gimp,English,Latest Available,Choco Install Gimp -Y --Force
+WireShark,WireShark,WireShark,English,Latest Available,Choco Install WireShark -Y --Force
+KeePass,KeePass,KeePass,English,Latest Available,Choco Install KeePass -Y --Force
+Sublime Text 3,Sublime Text 3,Sublime Text,English,Latest Available,Choco Install SublimeText3 -Y --Force
+Audacity,Audacity,Audacity,English,Latest Available,Choco Install Audacity -Y --Force
+Google Drive,Google Drive,Google,English,Latest Available,Choco Install Google-Backup-And-Sync -Y --Force
+SQL-Server-Express,SQL Express,Microsoft,English,Latest Available,Choco Install SQL-Server-Express -Y --Force
+Rufus,Rufus,Rufus,English,Latest Available,Choco Install Rufus -Y --Force
+Visual Studio Code,VSCode,Microsoft,English,Latest Available,Choco Install VSCode -Y --Force
+Office 365 ProPlus,Office 365 ProPlus,Microsoft,English,Latest Available,Choco Install choco install Office365ProPlus -Y --Force
+"Office 365 Business ","Office 365 Business ",Microsoft,English,Latest Available,Choco Install Office365Business -Y --Force
+PuTTY,PuTTY,PuTTY,English,Latest Available,Choco Install PuTTY.Install -Y --Force
+Node JS,Node JS,Node JS,English,Latest Available,Choco Install NodeJS.Install -Y --Force
+Sysinternals,Sysinternals,Microsoft,English,Latest Available,Choco Install Sysinternals -Y --Force
+Skype,Skype,Microsoft,English,Latest Available,Choco Install Skype -Y --Force
+Microsoft Visual C++ Redistributable 2015-2019,Microsoft,Microsoft,English,Latest Available,Choco Install vcredist140 -Y --Force
+FileZilla,FileZilla,FileZilla,English,Latest Available,Choco Install FileZilla -Y --Force
+Python 3,Python 3,Python,English,Latest Available,Choco Install Python -Y --Force
+"Microsoft .NET Framework ","Microsoft .NET Framework ",Microsoft,English,Latest Available,Choco Install dotnetfx -Y--Force
+"Tree Size Free ","Tree Size Free ","Tree Size ",English,Latest Available,Choco Install TreeSizeFree -Y--Force
+Chromium,Chromium,Chromium,English,Latest Available,Choco Install Chromium -Y--Force
+SQL Server Management Studio,SQL Server Management Studio,Microsoft,English,Latest Available,Choco Install SQL-Server-Management-Studio -Y--Force
+ThunderBird,ThunderBird,Mozilla,English,Latest Available,Choco Install ThunderBird -Y--Force
+"VirtualBox ","VirtualBox ",Oracle,English,Latest Available,Choco Install VirtualBox  -Y--Force
+Process Explorer,Process Explorer,Microsoft,English,Latest Available,Choco Install ProcExp -Y--Force
+Opera,Opera,Opera,English,Latest Available,Choco Install Opera -Y--Force
+AutoHotkey,AutoHotkey,AutoHotkey,English,Latest Available,Choco Install AutoHotkey.Install -Y--Force
+Classic Shell,Classic Shell,Classic Shell,English,Latest Available,Choco Install Classic-Shell -Y--Force
+uBlock Origin For Chrome,uBlock Origin,uBlock Origin,English,Latest Available,Choco Install uBlockRrigin-chrome -Y--Force
+uBlock Origin For FireFox,uBlock Origin,uBlock Origin,English,Latest Available,Choco Install uBlockRrigin-FireFox -Y--Force
